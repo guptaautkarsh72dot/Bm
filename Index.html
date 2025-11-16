@@ -627,4 +627,16 @@
             
             element.addEventListener('touchend', function() {
                 this.style.transform = 'scale(1)';
-            }
+            });
+        });
+
+        // Optimize for Android Chrome
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Optional: Add PWA functionality here
+                console.log('Android-optimized website loaded');
+            });
+        }
+    </script>
+</body>
+</html>
